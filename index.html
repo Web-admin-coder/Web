@@ -12,28 +12,28 @@
 <main class="wrap">
 <section class="hero"><div class="eyebrow">● COMPUTER SERVICE</div><h1>Компьютерлік қызметтер <span>бір жерде.</span></h1><p>Компьютер, ноутбук және принтерге арналған қызметтер. Өзіңізге ыңғайлы қызмет көрсету түрін таңдап, тапсырыс беріңіз.</p><a class="btn primary" href="#services">Прайс-листті көру ↓</a></section>
 <section class="section" id="services"><div class="kicker">ҚЫЗМЕТ КӨРСЕТУ ТҮРІ</div><h2>Қалай қызмет аласыз?</h2><p class="muted">Екі нұсқаның бірін таңдаңыз — бағалар автоматты түрде көрсетіледі.</p>
-<div class="mode"><button class="active" data-mode="bring"><strong>💻 Өзіңіз алып келу</strong><small>Компьютерді немесе ноутбукты өзіңіз әкелесіз.</small><em>Негізгі прайс бағалары</em></button><button data-mode="visit"><strong>🏠 Үйге барып қызмет көрсету</strong><small>Маман көрсетілген мекенжайға барып қызмет көрсетеді.</small><em>Негізгі баға + 700 ₸</em></button></div>
+<div class="mode"><button class="active" data-mode="bring"><strong>💻 Өзіңіз алып келу</strong><small>Компьютерді немесе ноутбукты өзіңіз әкелесіз.</small><em>Негізгі прайс бағалары</em></button><button data-mode="visit"><strong>🏠 Үйге барып қызмет көрсету</strong><small>Маман көрсетілген мекенжайға барып қызмет көрсетеді.</small><em>Негізгі баға + 1 000 ₸</em></button></div>
 <div class="tools"><input id="search" type="search" placeholder="Қызметті іздеу..."><div class="filters"><button class="filter active" data-filter="all">Барлығы</button><button class="filter" data-filter="windows">Windows</button><button class="filter" data-filter="software">Бағдарламалар</button><button class="filter" data-filter="printer">Принтер</button><button class="filter" data-filter="network">Желі</button><button class="filter" data-filter="remote">Қашықтан</button></div></div>
-<div id="catalog"></div><div class="empty" id="empty">Іздеу бойынша қызмет табылмады.</div><div class="note">Ескерту: Үйге барып қызмет көрсету бағасына 700 ₸ жол ақысы қосылған. Алыс мекенжайларға бару құны алдын ала келісіледі. Қашықтан көмек онлайн көрсетіледі.</div></section>
+<div id="catalog"></div><div class="empty" id="empty">Іздеу бойынша қызмет табылмады.</div><div class="note">Ескерту: Үйге барып қызмет көрсету бағасына 1 000 ₸ жол ақысы қосылған. Алыс мекенжайларға бару құны алдын ала келісіледі. Қашықтан көмек онлайн көрсетіледі.</div></section>
 <section class="contact"><div><div class="kicker">БАЙЛАНЫС</div><h2>Қызметке тапсырыс беріңіз</h2><p class="muted">WhatsApp арқылы хабарласып, қажетті қызметті таңдаңыз.</p></div><a class="btn primary" href="https://wa.me/77711441138?text=Сәлеметсіз%20бе!%20Компьютерлік%20қызметке%20тапсырыс%20бергім%20келеді." target="_blank" rel="noopener">WhatsApp-қа жазу ↗</a></section>
 </main><footer class="foot"><div class="wrap footrow"><span><b style="color:#eef5ff">ERSULTAN COMPUTER SERVICE</b><br>Компьютерлік қызметтер • Сапа • Сенімділік</span><span>WhatsApp: +7 771 144 11 38<br>© <span id="year"></span> Барлық құқықтар қорғалған</span></div></footer>
 <script>
-const WHATSAPP_NUMBER="77711441138",HOME_VISIT_FEE=700;
+const WHATSAPP_NUMBER="77711441138",HOME_VISIT_FEE=1000;
 const services=[
-{id:"activation",cat:"windows",group:"Windows және жүйе",name:"Windows активация жасау",price:2500},
-{id:"drivers",cat:"windows",group:"Windows және жүйе",name:"Драйверлер орнату",price:1000},
-{id:"office",cat:"software",group:"Бағдарламалар орнату",name:"Microsoft Office орнату",price:1500},
-{id:"pdf",cat:"software",group:"Бағдарламалар орнату",name:"PDF бағдарламаларын орнату",price:1000},
-{id:"archiver",cat:"software",group:"Бағдарламалар орнату",name:"Архиватор (WinRAR, 7-Zip)",price:500},
-{id:"browser",cat:"software",group:"Бағдарламалар орнату",name:"Браузерлер орнату",price:500},
-{id:"combo",cat:"software",group:"Бағдарламалар орнату",name:"COMBO: Стандартты бағдарламалар пакеті",price:3300,description:"Microsoft Office, PDF Reader, WinRAR / 7-Zip және Google Chrome"},
-{id:"printer",cat:"printer",group:"Принтер және сканер",name:"Принтер орнату",price:1500},
-{id:"printer-driver",cat:"printer",group:"Принтер және сканер",name:"Принтер драйверін орнату",price:1000},
-{id:"scanner",cat:"printer",group:"Принтер және сканер",name:"Сканер баптау",price:1000},
-{id:"waste-ink",cat:"printer",group:"Принтер және сканер",name:"Принтердің памперсін тазалау және счетчигін қалпына келтіру",min:2500,max:3500},
-{id:"wifi",cat:"network",group:"Интернет және желі",name:"Wi-Fi баптау",price:2000},
-{id:"lan",cat:"network",group:"Интернет және желі",name:"Жергілікті желі баптау",price:3000,from:true},
-{id:"anydesk",cat:"remote",group:"Қашықтан көмек",name:"AnyDesk арқылы қашықтан көмек",price:1500,remote:true}
+{id:"activation",cat:"windows",group:"Windows және жүйе",name:"Windows активация жасау",price:3000},
+{id:"drivers",cat:"windows",group:"Windows және жүйе",name:"Драйверлер орнату",price:1500},
+{id:"office",cat:"software",group:"Бағдарламалар орнату",name:"Microsoft Office орнату",price:2500},
+{id:"pdf",cat:"software",group:"Бағдарламалар орнату",name:"PDF бағдарламаларын орнату",price:1500},
+{id:"archiver",cat:"software",group:"Бағдарламалар орнату",name:"Архиватор (WinRAR, 7-Zip)",price:1000},
+{id:"browser",cat:"software",group:"Бағдарламалар орнату",name:"Браузерлер орнату",price:1000},
+{id:"combo",cat:"software",group:"Бағдарламалар орнату",name:"COMBO: Стандартты бағдарламалар пакеті",price:4500,description:"Microsoft Office, PDF Reader, WinRAR / 7-Zip және Google Chrome"},
+{id:"printer",cat:"printer",group:"Принтер және сканер",name:"Принтер орнату",price:2500},
+{id:"printer-driver",cat:"printer",group:"Принтер және сканер",name:"Принтер драйверін орнату",price:1500},
+{id:"scanner",cat:"printer",group:"Принтер және сканер",name:"Сканер баптау",price:1500},
+{id:"waste-ink",cat:"printer",group:"Принтер және сканер",name:"Принтердің памперсін тазалау және счетчигін қалпына келтіру",min:3500,max:5000},
+{id:"wifi",cat:"network",group:"Интернет және желі",name:"Wi-Fi баптау",price:3000},
+{id:"lan",cat:"network",group:"Интернет және желі",name:"Жергілікті желі баптау",price:4000,from:true},
+{id:"anydesk",cat:"remote",group:"Қашықтан көмек",name:"AnyDesk арқылы қашықтан көмек",price:2000,remote:true}
 ];
 let mode="bring",filter="all",query="";
 const money=n=>n.toLocaleString("ru-RU").replace(/\u00a0/g," ")+" ₸";
